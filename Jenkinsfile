@@ -1,12 +1,16 @@
 pipeline{
-    agent any{
+    agent any
+    stages{
         stage('1-repoClone'){
             steps{
-                sh'df -h'
+                sh 'df -h'
             }
         }
         stage('2-cpuAnalysis'){
-            steps 'lscpu'
+            steps{ 
+                sh 'lscpu'
+        }
+
         }
         stage('3-memoryCheck'){
             steps{
