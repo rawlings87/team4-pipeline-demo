@@ -6,7 +6,7 @@ pipeline{
             }
         }
         stage('2-cpuAnalysis'){
-            stepssh 'lscpu'
+            steps 'lscpu'
         }
         stage('3-memoryCheck'){
             steps{
@@ -15,7 +15,9 @@ pipeline{
 
         }
         stage('4-os-stats'){
-            stepssh 'cat /etc/os-release'
+            steps{
+
+             'cat /etc/os-release'
         }
     }
 }
