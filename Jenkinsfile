@@ -1,28 +1,31 @@
 pipeline {
-  agent {
-   
+    agent any
+    environment {
+        TEAM4 = "Test global ENV variables."
     }
-    MEMBERS{
-     
-      
-    }
-    KEN=${Dev}
-    PRETEI=${Prod}
-    TAIWO=${UAT}
-    stages{
-      stage('1-clonecode'){
-        steps{
-          sh "df-h"
-          sh "lscpu"
+    stages {
+        stage("Build") {
+            environment {
+                TEAM4 = "Test stage ENV variables."
+            }
+            steps {
+                echo "Build stage."
+                echo "$Ken"
+                echo "$Taiwo"
+                echo "Pretei"
+            }
+        }
+        stage("Test") {
+            steps {
+                echo "Test stage."
+                echo "$env.SAMPLE_GLOBAL_ENV_VAR"
+            }
+        }
+        stage("Release") {
+            steps {
+                echo "Release stage."
+                echo "${WELCOME TO Team4healthapp}"
+            }
         }
     }
-    Stage ('2-codebuild'){
-      steps{
-        sh 'free-g'
-      }
-    }
-
-  }
 }
-
-
