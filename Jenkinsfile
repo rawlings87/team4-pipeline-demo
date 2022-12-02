@@ -3,8 +3,8 @@ pipeline {
    
     }
     MEMBERS{
-      Group4 '$groupmember'
-      team "teamname"
+      Group4'$groupmember'
+      
     }
     KEN=${Dev}
     PRETEI=${Prod}
