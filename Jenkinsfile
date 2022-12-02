@@ -3,7 +3,7 @@ pipeline {
    
     }
     MEMBERS{
-      Group4'$groupmember'
+      Group'$groupmember'
       
     }
     KEN=${Dev}
