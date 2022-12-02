@@ -1,14 +1,14 @@
 pipeline {
-    agent any
-  stages {
-    stage('Team4healthapp') {
-      steps {
-        sh 'echo "Hello World"'
-      }
+  agent {
+   
+    }
+    MEMBERS{
+      Group4 '$groupmember'
+      team "teamname"
     }
     KEN=${Dev}
-    PRETEI={build:$version}
-    TAIWO=${version}
+    PRETEI=${Prod}
+    TAIWO=${UAT}
     stages{
       stage('1-clonecode'){
         steps{
@@ -25,4 +25,4 @@ pipeline {
   }
 }
 
-}
+
