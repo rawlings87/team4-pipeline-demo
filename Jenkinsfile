@@ -18,13 +18,13 @@ pipeline {
         stage("Test") {
             steps {
                 echo "Test stage."
-                echo "$env.SAMPLE_GLOBAL_ENV_VAR"
+                echo "$Team4healthapp"
             }
         }
         stage("Release") {
             steps {
                 echo "Release stage."
-                echo "${WELCOME TO Team4healthapp}"
+                echo "${Team4healthapp}"
             }
         }
     }
