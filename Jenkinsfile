@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-        TEAM4 = "Test global ENV variables."
+        TEAM4 = "variables."
     }
     stages {
         stage("Build") {
