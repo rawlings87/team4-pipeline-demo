@@ -6,7 +6,7 @@ pipeline {
     stages {
         stage("Build") {
             environment {
-                TEAM4 = "Test stage ENV variables."
+                TEAM4 = "Testing healthapp."
             }
             steps {
                 echo "Build stage."
